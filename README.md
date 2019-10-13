@@ -1,5 +1,6 @@
 # Word Guess Game
-JavaScript Assignment - Create Word Guess Game
+
+## JavaScript Assignment - Create Word Guess Game
 
 The goal of this homework assignment is to creat a game that allow the user to guess for a word to match with a work randomly sellected and store in memory.
 

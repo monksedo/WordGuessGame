@@ -22,25 +22,25 @@ var wordsArr = [
    "laura",
    "leticia"
 ];
-// Solution will be held here.
+// Random word veriable 
 var randomWord = "";
-// This will break the solution into individual letters to be stored in array.
+// Indivual letter found from random word will store here.
 var charFromRandomWord = [];
-// This will be the number of blanks we show based on the solution
+// The underscore string to print on HTML.
 var underScoreNo = 0;
-// Holds a mix of blank and solved letters (ex: 'n, _ _, n, _').
+// Win Loss Mix Letter array.
 var winLossMixArr = [];
-// Holds all of the wrong guesses
+// Array to hold all unmatch letter.
 var unMatchGuesses = [];
 
-// Game counters
+// Game score counters
 var winCounter = 0;
 var lossCounter = 0;
 var trialLeft = 9;
 
 // Start new game here
 function startTheGame() {
-   // Reset the guesses back to 0.
+   // Reset the trialLeft value.
    trialLeft = 9;
 
    // Sellect a random array index, then store the word in randomWord veriable.
@@ -55,16 +55,13 @@ function startTheGame() {
 
    // Reset Array win loss mix array for every new game.
    winLossMixArr = [];
-   // Reset unMatchGuesses array for every new game.
+   // Reset unMatchGuess leter count
    unMatchGuesses = [];
 
    // Insert number of underscore in the winLossMixArr.
    for (var i = 0; i < underScoreNo; i++) {
       winLossMixArr.push("_");
    }
-
-   // Display the initial blanks in console.
-   console.log(winLossMixArr);
 
    // Display trial left count
    document.getElementById("trial-left").innerHTML = trialLeft;
@@ -92,11 +89,11 @@ function compareLetters(char) {
 
    if (charFromWord) {
       // Loop through the word.
-      for (var j = 0; j < underScoreNo; j++) {
+      for (var c = 0; c < underScoreNo; c++) {
          // Insert the winLossMixArr with every letter.
-         if (randomWord[j] === char) {
+         if (randomWord[c] === char) {
             // Assign letter to winLossMixArr.
-            winLossMixArr[j] = char;
+            winLossMixArr[c] = char;
          }
       }
       // print to console for testing.
@@ -112,8 +109,8 @@ function compareLetters(char) {
 // Run this function to track all wins and losses values and print to html.
 function dataUpdating() {
    // Print data to console for testing.
-   console.log(
-      "WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + trialLeft);
+   // console.log(
+   //    "WinCount: " + winCounter + " ; LossCount: " + lossCounter + " ; NumGuesses: " + trialLeft);
 
    // Print trial-left, word-guesses, wins, losses to HTML
    document.getElementById("trial-left").innerHTML = trialLeft;
