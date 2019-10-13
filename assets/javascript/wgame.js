@@ -97,7 +97,7 @@ function compareLetters(char) {
          }
       }
       // print to console for testing.
-      console.log(winLossMixArr);
+      // console.log(winLossMixArr);
    }
    // If there is no match than, insert the letter to unMatchGuesses list.
    else {
