@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>UC Berkeley BootCamp - Word Guess</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+   <!-- Bootstrap Container will hold everything -->
+   <div class="container">
+      <!-- Jumbotron holds the title section -->
+      <div class="game-heading">
+         <h1 class="h1-heading">Word Guessing Game</h1>
+         <h2>Guess the name of students from class!</h2>
+         <h3>Press any letter to begin...</h3>
+
+      </div>
+
+      <div>
+         <div class="">
+            <h3 class="h3-heading">Name to Guess</h3>
+         </div>
+         <div class="word-placeholder">
+            <h3 id="word-guesses">_ _ _ _ _ _ _ _ _</h3>
+         </div>
+      </div>
+      <div class="score-text">
+         <div>
+            <strong>Wrong Guesses: </strong> <span id="wrong-word"></span>
+         </div>
+
+         <div>
+            <strong>Trial Left: </strong> <span id="trial-left">9</span>
+         </div>
+
+         <div>
+            <strong>Wins: </strong> <span id="correct">0</span>
+         </div>
+
+         <div>
+            <strong>Losses: </strong> <span id="incorrect">0</span>
+         </div>
+      </div>
+   </div>
+
+
+   <script src="assets/javascript/wgame.js"></script>
+</body>
+
+</html>
