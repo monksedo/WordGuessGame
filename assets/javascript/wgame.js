@@ -1,5 +1,5 @@
 
-// Array of Word Options (all lowercase)
+// Array of Word Options
 var wordsArr = [
    "mirian",
    "dave",
@@ -121,14 +121,14 @@ function dataUpdating() {
    // Print unMatchGuesses to HTML
    document.getElementById("wrong-word").innerHTML = unMatchGuesses.join(" ");
 
-   // Alert Congratulation, You won! if all letters match.
    if (charFromRandomWord.toString() === winLossMixArr.toString()) {
-
       winCounter++;
+      // Alert Congratulation, You won! if all letters match.
       alert("Congratulation, You won!");
 
       // Print wins counter to HTML
       document.getElementById("correct").innerHTML = winCounter;
+      // Restart the game
       startTheGame();
    }
 
@@ -137,6 +137,7 @@ function dataUpdating() {
       // Increase loss counter
       lossCounter++;
 
+      // alert user of game over
       alert("Game Over My Friend!");
 
       // Print loss counter value to HTML.
@@ -153,7 +154,7 @@ startTheGame();
 document.onkeyup = function (e) {
    // Convert key to string and to lower case.
    var charEntered = String.fromCharCode(e.which).toLowerCase();
-   // Call 
+   // Call compareLetters()
    compareLetters(charEntered);
    // Runs the code after each round is done.
    dataUpdating();
