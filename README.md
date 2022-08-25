@@ -9,7 +9,7 @@ The user must guess a each letter until all the guessed letters match the word i
 The game will keep track of letters entered, wins and losses points, and reset the game when the user losses or wins a game.
 
 ## Run The App
-[Click here to run](https://monksedo.github.io/WordGuessGame/)
+[Click here to run](https://tvn9.github.io/WordGuessGame/)
 
 ## Technology Used
 HTML, CSS, JAVASCRIPT 
